@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding-bottom: 3rem;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: #f3ebf3;
+    }
+
+    h2 {
+        text-align: center;
+        padding-top: 46px;
+        font-family: inherit;
+    }
+
+    p {
+        text-align: center;
+        padding-top: 1px;
+        font-family: inherit;
+        font-size: x-large;
+    }
+
+    .bg {
+        top: 192px;
+        position: absolute;
+        right: 0;
+    }
+
+    .bg img {
+        width: 77%;
+    }
+
+    #form {
+
+        width: 335px;
+        top: 177px;
+        left: 260px;
+        position: relative;
+
+    }
+
+    #form button {
+        background: #2f0b53;
+        color: #fff;
+        border: 0px;
+    }
+</style>
+
+<body>
+    <h2>Strangers Social Network</h2>
+    <p>eChats - Talk, Chat & Make New Friends Online.</p>
+    <div class="bg">
+        <img src="https://img.e-chats.com/e/img/552226f2a5fc97ad.png">
+    </div>
+    <form id="form" method="get" action="/chat">
+        <div class="form-outline mb-4">
+            <input type="name" id="name" autocomplete="" class="form-control" placeholder="Enter your name" />
+        </div>
+        <button type="submit" class="btn btn-info btn-block">Enter</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let name = document.getElementById('name').value
+            if (!name) {
+                alert('Your name must be entered.')
+            } else {
+                window.name = name
+                location.href = "/chat/";
+            }
+        });
+    </script>
+</body>
+
+</html>
